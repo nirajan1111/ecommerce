@@ -4,4 +4,4 @@ from django.http import JsonResponse
 
 
 def home(request):
-    return JsonResponse({'info':'Dyango React course', 'name':'Nirajan'})
+    return JsonResponse({'info': 'Dyango React course', 'name': 'Nirajan'})

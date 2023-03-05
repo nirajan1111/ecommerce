@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'corsheaders',
     'api',
+    'api.product',
+    'api.user',
+    'api.order',
+    'api.category',
+    'api.payment',
     'django.contrib.staticfiles',
 ]
 
@@ -82,7 +87,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': (BASE_DIR / 'db.sqlite3'),
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -124,8 +129,12 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+AUTH_USER_MODEL = "user.CustomUser"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
