@@ -1,2 +1,3 @@
 # ecommerce
- THIS SITE WOULD ALLOW THE USER TO BUY AND SELL PRODUCTS
+ backend of ecommerce 
+still under construction
